@@ -1,3 +1,3 @@
 # my-portfolio
 
-Welcome to my porfolio!!
+Welcome to my portfolio!!
