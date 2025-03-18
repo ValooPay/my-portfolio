@@ -19,7 +19,7 @@ const AboutMe = () => {
                 </p>
         </div>
     </StyledAboutMe>
-    <img src="/assets/valuigi.jpg" alt="A photo of me!" className="valPhoto hidden"/>
+    <img src="./assets/valuigi.jpg" alt="A photo of me!" className="valPhoto hidden"/>
     </section>
 }
 

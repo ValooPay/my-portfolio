@@ -10,7 +10,7 @@ const Projects = () => {
                 </StyledProjectsDiv>
                 <StyledProjectsDiv>
                     <p>Tic Tac Toe game</p>
-                    <img src="./assets/tictactoe.png" />
+                    <img src="./assets/tictactoe.PNG" />
                 </StyledProjectsDiv>
                 <div>
                     <p>...And more to come!</p>
