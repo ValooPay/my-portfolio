@@ -15,14 +15,14 @@ const HeroSection = () => {
 export default HeroSection
 
 const StyledHeroSection = styled.div`
-    display: flex;
-    flex-direction: column;
+    display: block;
     min-height: 95vh;
     font-size: 5rem;
     font-weight: bolder;
-    justify-content: center;
     overflow-x: hidden;
     border-bottom: dotted 10px #294C60;
+    align-content: center;
+    position: relative;
     h1{
         font-size: 10rem;
         animation-name: slide-in;
