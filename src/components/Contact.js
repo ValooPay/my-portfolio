@@ -10,7 +10,7 @@ const Contact = () => {
             <form onSubmit={(ev) => {ev.preventDefault()}}>
                 <label htmlFor="nameInput">Name: <input required id="nameInput" type="text"></input></label>
                 <label htmlFor="emailInput">email: <input required id="emailInput" type="text"></input></label>
-                <textarea placeholder="Type your message here!" style={{margin: "2rem auto 1rem", width: "500px", height: "100px"}}></textarea>
+                <textarea placeholder="Type your message here!" style={{margin: "2rem auto 1rem", width: "100%", maxWidth: "500px", height: "100px"}}></textarea>
                 <StyledSubmitButton disabled={true} type="submit">Submit</StyledSubmitButton>
             </form>
             <p>Thank you for visiting!</p>
