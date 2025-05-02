@@ -36,6 +36,13 @@ const StyledHeroSection = styled.div`
         animation-name: fade-in;
         animation-duration: 2.25s;
     }
+    img{
+        position: absolute;
+        width: 250px;
+        height: auto;
+        left: 15dvw;
+        bottom: 0;
+    }
     @keyframes slide-in {
         0% {
             transform-origin: left;
@@ -68,5 +75,8 @@ const StyledHeroSection = styled.div`
     @media screen and (max-width: 480px) {
         &{max-width: 100%;
         min-height: 100;}
+        img{
+            left: 10dvw;
+        }
     }
 `
