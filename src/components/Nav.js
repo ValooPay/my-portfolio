@@ -22,8 +22,8 @@ const Nav = () => {
 }
 
 const StyledNavigationBar = styled.nav`
-    background-color: #FFC49B;
-    border-bottom: dotted 5px #294C60;
+    background-color: var(--color-sections-dark);
+    border-bottom: dashed 3px var(--color-text-light);
     font-weight: bolder;
     font-size: 2rem;
     padding: 1.5rem 0;
@@ -32,7 +32,7 @@ const StyledNavigationBar = styled.nav`
     flex-direction: row;
     justify-content: space-around; 
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 2;
     a{

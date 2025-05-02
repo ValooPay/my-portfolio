@@ -1,34 +1,38 @@
 import styled from "styled-components"
+import NyanCat from "../assets/NyanCatZubatGame.png"
+import TicTacToe from "../assets/tictactoe.PNG"
 
 const Projects = () => {
-    return <div id="Projects" className="paleSections scrollable">
+    return <div id="Projects" className="paleSections scrollable" style={{position: "relative", padding: "5rem 0"}}>
         <div className="hidden">
-            <h2>Projects</h2>
-                <StyledProjectsDiv>
-                    <p>Nyan Cat game</p>
-                    <img src="./assets/NyanCatZubatGame.png" />
-                </StyledProjectsDiv>
-                <StyledProjectsDiv>
-                    <p>Tic Tac Toe game</p>
-                    <img src="./assets/tictactoe.PNG" />
-                </StyledProjectsDiv>
+            <h2>Coding Projects</h2>
+            <StyledGrid>
                 <div>
-                    <p>...And more to come!</p>
+                    <p>Final project - Doodle Board</p>
+                        <iframe className="projects" width="560" height="315" src="https://www.youtube.com/embed/7Tyty6oGY-o?si=4lw9fIgCB9kDiW7J"></iframe>
                 </div>
+                <div>
+                    <p>Group project - E-commerce</p>
+                        <iframe className="projects" width="560" height="315" src="https://www.youtube.com/embed/mg8nJJRPYtg?si=Ef3PEu6MlWZe6SNS"></iframe>
+                </div>
+                <div>
+                    <p>Nyan Cat game</p>
+                        <img className="projects" src={NyanCat} />
+                </div>
+                <div>
+                    <p>Tic Tac Toe game</p>
+                        <img className="projects" src={TicTacToe} />
+                </div>
+            </StyledGrid>
         </div>
     </div>
 }
 
-const StyledProjectsDiv = styled.div`
-    display: inline-block;
+const StyledGrid = styled.div`
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
     margin: 3rem 2rem;
-    img {
-        height: 32rem;
-        padding: 5px;
-        background-color: #ffc49b;
-        border: dashed 3px #001b2e;
-        margin-top: 1rem;
-    }
 `
 
 export default Projects

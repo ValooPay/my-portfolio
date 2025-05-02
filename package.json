@@ -2,11 +2,12 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage" : "https://ValooPay.github.io/my-portfolio",
+  "homepage": "https://ValooPay.github.io/my-portfolio",
   "repository": "https://github.com/ValooPay/my-portfolio.git",
   "author": "Valerie Payeur <valeriepayeur@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

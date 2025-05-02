@@ -4,7 +4,8 @@ import { IconContext } from "react-icons"
 
 
 const SkillsnTech = () => {
-    return <StyledDivForSkills>
+    return <div>
+    <StyledDivForSkills>
         <IconContext.Provider value={{className: "allIcons"}}>
             <div className="rowOfIcons hidden">
                 <span className="iconAnimation hidden"><HtmlIcon  /></span> 
@@ -15,15 +16,14 @@ const SkillsnTech = () => {
                 <span className="iconAnimation hidden"><ReactIcon /></span>
             </div>
         </IconContext.Provider>
-        
     </StyledDivForSkills>
+    </div>
 }
 
 const StyledDivForSkills = styled.div`
-    background-color: #FFC49B;
     padding: 4rem;
-    border-bottom: dotted 10px #294C60;
-    border-top: dotted 10px #294c60;
+    border-bottom: dashed 3px var(--color-text-light);
+    border-top: dashed 3px var(--color-text-light);
 `
 
 export default SkillsnTech

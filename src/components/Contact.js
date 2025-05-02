@@ -1,35 +1,55 @@
 import styled from "styled-components"
+import React, { useRef } from "react"
+import emailjs from '@emailjs/browser'
 import { LinkedInIcon } from "./Icons"
+import Paperplane from "../assets/paperplane.png"
 
 const Contact = () => {
-    return (<StyledContactDiv id="Contact" className="scrollable">
+    const form = useRef()
+    const SERVICE_ID = "valerie_contact_service"
+    const TEMPLATE_ID = "template_32h3dxr"
+    const PUBLIC_KEY = "B4kkWeoNj_QfPbxg6"
+
+    const handleSubmitEmail = (ev) => {
+        ev.preventDefault();
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, ev.target, PUBLIC_KEY)
+        .then((result) => {
+                alert("Message sent successfully!")
+                ev.target.reset()
+                console.log("Success!");
+            },
+            (error) => {
+                alert("An error has occurred")
+                console.log("Failed...", error.text);
+            })
+    }
+
+    return <StyledContactDiv id="Contact" className="scrollable">
         <div className="hidden">
             <h2 style={{marginBottom: "2rem"}}>Contact</h2>
             <p>If you'd like to get in touch with me, you can find me over on <a target="_blank" href="https://www.linkedin.com/in/val%C3%A9rie-payeur-0050baa7/"><LinkedInIcon />LinkedIn</a></p>
-            <p>or fill out this form! (Currently disabled)</p>
-            <form onSubmit={(ev) => {ev.preventDefault()}}>
-                <label htmlFor="nameInput">Name: <input required id="nameInput" type="text"></input></label>
-                <label htmlFor="emailInput">email: <input required id="emailInput" type="text"></input></label>
-                <textarea placeholder="Type your message here!" style={{margin: "2rem auto 1rem", width: "100%", maxWidth: "500px", height: "100px"}}></textarea>
-                <StyledSubmitButton disabled={true} type="submit">Submit</StyledSubmitButton>
+            <p>or fill out this form!</p>
+            <form ref={form} onSubmit={handleSubmitEmail}>
+                <label htmlFor="from_name">Name: <input required id="from_name" name="from_name" type="text"></input></label>
+                <label htmlFor="from_email">email: <input required id="from_email" name="from_email" type="email"></input></label>
+                <label htmlFor="title">Title: <input required id="title" name="title" type="text"></input></label>
+                <textarea required name="message" id="message" placeholder="Type your message here!" style={{margin: "2rem auto 1rem", width: "100%", maxWidth: "500px", height: "100px", fontFamily: "Grandstander"}}></textarea>
+                <StyledSubmitButton type="submit">Submit</StyledSubmitButton>
             </form>
             <p>Thank you for visiting!</p>
-            <img className="paperPlaneImage" src="./assets/paperplane.png" alt="Send me a message, let's get in touch!" />
+            <img className="paperPlaneImage" src={Paperplane} alt="Send me a message, let's get in touch!" />
         </div>
     </StyledContactDiv>
-    )
 }
 
 const StyledContactDiv = styled.div`
-    background-color: #FFC49B;
-    padding: 4rem 2rem;
-    height: 60vh;
-    border-top: dotted 10px #294c60;
+    padding: 4rem 2rem 2rem;
+    background-color: var(--color-sections-dark);
 `
 
 const StyledSubmitButton = styled.button`
     margin: auto;
-    background-color: #001b2e;
+    background-color: var(--color-text-light);
     border: none;
     border-radius: 15px;
     color: white;
@@ -37,6 +57,7 @@ const StyledSubmitButton = styled.button`
     font-family: "Grandstander";
     font-size: 1rem;
     font-weight: bolder;
+    text-shadow: 1px 1px 3px rgba(0, 0, 3, 0.25)
 `
 
 export default Contact

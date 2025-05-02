@@ -4,9 +4,14 @@ import AboutMe from "./AboutMe"
 import SkillsnTech from "./SkillsnTech"
 import Projects from "./Projects"
 import Contact from "./Contact"
-import { useEffect } from "react"
+import ProjectsAnimation from "./ProjectsAnimation"
+import ColorSwitch from "./ColorSwitch"
+import { useEffect, useContext } from "react"
+import { LightDarkModeContext } from "../context/LightDarkModeContext"
 
 const App = () => {
+    const { theme } = useContext(LightDarkModeContext)
+
     useEffect(() => {
         const hiddenElements = document.querySelectorAll(".hidden")
         const observer = new IntersectionObserver((entries) => {
@@ -18,15 +23,20 @@ const App = () => {
         })
         hiddenElements.forEach((el) => observer.observe(el))
     })
+
     return (
-        <>
-            <Nav />
-            <HeroSection />
-            <AboutMe />
-            <SkillsnTech />
-            <Projects />
-            <Contact />
-        </>
+        <div data-theme={theme}>
+            <div className="generalColors">
+                <Nav />
+                <HeroSection />
+                <AboutMe />
+                <SkillsnTech />
+                <Projects />
+                <ProjectsAnimation />
+                <Contact />
+                <ColorSwitch />
+            </div>
+        </div>
     )
 }
 

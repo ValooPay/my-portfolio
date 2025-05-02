@@ -1,12 +1,15 @@
 import styled from "styled-components"
+import AnimVal from "../assets/animationval.gif"
 
 const HeroSection = () => {
     return (
-        <>            
+        <>
         <StyledHeroSection id="Home">
             <h1>Welcome!</h1>
-            <div>to my portfolio!</div>
-            <img src="./assets/valanimation.gif" alt="Hello there!! I'm Val!" className="animationVal" />
+            <div>
+                <img src={AnimVal + "?a="+Math.random()+""} alt="Welcome!" />
+                <p>to my portfolio!</p>
+            </div>
         </StyledHeroSection>
         </>
     )
@@ -16,21 +19,30 @@ export default HeroSection
 
 const StyledHeroSection = styled.div`
     display: block;
-    min-height: 95vh;
+    min-height: 100vh;
     font-size: 5rem;
     font-weight: bolder;
     overflow-x: hidden;
-    border-bottom: dotted 10px #294C60;
     align-content: center;
-    position: relative;
     h1{
         font-size: 10rem;
         animation-name: slide-in;
         animation-duration: 1s;
+        position: relative;
     }
     div {
+        position: relative;
+    }
+    p{
         animation-name: fade-in;
         animation-duration: 2.25s;
+    }
+    img{
+        position: absolute;
+        width: 250px;
+        height: auto;
+        left: 15dvw;
+        bottom: 0;
     }
     @keyframes slide-in {
         0% {
