@@ -323,6 +323,6 @@ input{
         left: 3rem;
     }
     .paperPlaneImage{
-        max-width: 60vw;
+        width: 75dvw;
     }
 }
