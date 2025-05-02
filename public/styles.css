@@ -262,6 +262,8 @@ button:disabled{
     position: absolute;
     bottom: -50px;
     right: 3%;
+    width: 100%;
+    height: auto;
     max-width: 30vw;
     z-index: -1;
 }
@@ -323,6 +325,6 @@ input{
         left: 3rem;
     }
     .paperPlaneImage{
-        width: 75dvw;
+        max-width: 60dvw;
     }
 }
