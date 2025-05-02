@@ -126,8 +126,9 @@ table {
     fill: var(--color-sections-dark);
 }
 
+/* END CURVES*/
 
-
+/* GENERAL BODY CSS */
 body {
     display: flex;
     max-width: 100dvw;
@@ -165,16 +166,6 @@ a:active {
     color: #ADB6C4;
 }
 
-.valPhoto {
-    border: dashed 5px var(--color-text-light);
-    border-radius: 50%;
-    margin: auto;
-    float: right;
-    width: 25%;
-    height: 25%;
-    margin: 0 2rem;
-    }
-
 .paleSections {
     display: flex;
     justify-content: center;
@@ -186,30 +177,6 @@ a:active {
 
 .scrollable{
     scroll-margin-top: 3.5rem;
-}
-
-.allIcons{
-    transform: scale(225%);
-    color: var(--color-text-dark);
-}
-
-.rowOfIcons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem 0;
-}
-
-.projects {
-    background-color: var(--color-sections-dark);
-    padding: 1rem;
-    border: dashed 3px var(--color-text-light);
-    margin: 1rem;
 }
 
 .hidden {
@@ -241,6 +208,30 @@ form {
     transition-delay: 600ms;
 }
 
+.allIcons{
+    transform: scale(225%);
+    color: var(--color-text-dark);
+}
+
+.rowOfIcons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+.projects {
+    background-color: var(--color-sections-dark);
+    padding: 1rem;
+    border: dashed 3px var(--color-text-light);
+    margin: 1rem;
+}
+
 button:active {
     background-color: var(--submit-button-active);
     transform: scale(0.95);
@@ -255,16 +246,31 @@ button:disabled{
     cursor: not-allowed;
 }
 
+
+/* IMAGES */
+.valPhoto {
+    border: dashed 5px var(--color-text-light);
+    border-radius: 50%;
+    margin: auto;
+    float: right;
+    width: 25%;
+    height: 25%;
+    margin: 0 2rem;
+    }
+
 .paperPlaneImage{
     position: absolute;
-    bottom: -55px;
+    bottom: -50px;
     right: 3%;
     max-width: 30vw;
     z-index: -1;
 }
+/* END IMAGES */
 
-form {
+/* FORM */
+.formDiv {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     width: fit-content;
     margin: 0 auto;
@@ -288,7 +294,7 @@ form {
     z-index: 3;
     display: flex;
     background: var(--light-mode-button);
-    padding: 0 10px;
+    padding: 0.5rem;
 }
 
 .modeButton:active {
@@ -310,13 +316,12 @@ input{
         flex-direction: column-reverse;
     }
     .paperPlaneImage{
-        max-width: 100dvw;
+        max-width: 75dvw;
     }
     .modeButtonText{
         font-size: 5rem;
     }
     .modeButton{
-        padding: 0 20px;
         bottom: 3rem;
         left: 3rem;
     }

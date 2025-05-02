@@ -32,17 +32,19 @@ const Contact = () => {
                 <p>or fill out this form!</p>
             </div>
             <form ref={form} onSubmit={handleSubmitEmail} style={{margin: "1rem auto", position: "relative"}}>
-                <div className="formElements">
-                    <label htmlFor="from_name">Name: </label>
-                    <input required id="from_name" name="from_name" type="text"></input>
-                </div>
-                <div className="formElements">
-                    <label htmlFor="from_email">email: </label>
-                    <input required id="from_email" name="from_email" type="email"></input>
-                </div>
-                <div className="formElements">
-                    <label htmlFor="title">Title: </label>
-                    <input required id="title" name="title" type="text"></input>
+                <div className="formDiv">
+                    <div className="formElements">
+                        <label htmlFor="from_name">Name: </label>
+                        <input required id="from_name" name="from_name" type="text"></input>
+                    </div>
+                    <div className="formElements">
+                        <label htmlFor="from_email">email: </label>
+                        <input required id="from_email" name="from_email" type="email"></input>
+                    </div>
+                    <div className="formElements">
+                        <label htmlFor="title">Title: </label>
+                        <input required id="title" name="title" type="text"></input>
+                    </div>
                 </div>
                 <textarea required name="message" id="message" placeholder="Type your message here!" style={{margin: "2rem auto 1rem", width: "100%", maxWidth: "500px", height: "100px", fontFamily: "Grandstander"}}></textarea>
                 <StyledSubmitButton type="submit">Submit</StyledSubmitButton>

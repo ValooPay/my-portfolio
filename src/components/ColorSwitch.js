@@ -6,10 +6,10 @@ const ColorSwitch = () => {
     
 return <>
     {theme === "light" ? <button className="modeButton" onClick={handleClick} type="button" style={{border: "2px dashed #001b2e"}}>
-            <p className="modeButtonText">☀︎</p>
+            <p className="modeButtonText">&#127774;</p>
         </button> : 
         <button className="modeButton" onClick={handleClick} type="button" style={{border: "2px dashed #c98403"}}>
-            <p className="modeButtonText" style={{transform: "rotate(30deg)", padding: "0 5px"}}>☽</p>
+            <p className="modeButtonText">&#127773;</p>
     </button>}
     </> 
 }
