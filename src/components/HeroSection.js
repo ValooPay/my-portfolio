@@ -7,7 +7,7 @@ const HeroSection = () => {
         <StyledHeroSection id="Home">
             <h1>Welcome!</h1>
             <div>
-                <img src={AnimVal + "?a="+Math.random()+""} alt="Welcome!" />
+                <img className="valAnimation" src={AnimVal + "?a="+Math.random()+""} alt="Welcome!" />
                 <p>to my portfolio!</p>
             </div>
         </StyledHeroSection>
@@ -28,7 +28,6 @@ const StyledHeroSection = styled.div`
         font-size: 10rem;
         animation-name: slide-in;
         animation-duration: 1s;
-        position: relative;
     }
     div {
         position: relative;
@@ -36,13 +35,6 @@ const StyledHeroSection = styled.div`
     p{
         animation-name: fade-in;
         animation-duration: 2.25s;
-    }
-    img{
-        position: absolute;
-        width: 250px;
-        height: auto;
-        left: 15dvw;
-        bottom: 0;
     }
     @keyframes slide-in {
         0% {
