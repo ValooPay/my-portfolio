@@ -25,14 +25,25 @@ const Contact = () => {
     }
 
     return <StyledContactDiv id="Contact" className="scrollable">
-        <div className="hidden">
-            <h2 style={{marginBottom: "2rem"}}>Contact</h2>
-            <p>If you'd like to get in touch with me, you can find me over on <a target="_blank" href="https://www.linkedin.com/in/val%C3%A9rie-payeur-0050baa7/"><LinkedInIcon />LinkedIn</a></p>
-            <p>or fill out this form!</p>
-            <form ref={form} onSubmit={handleSubmitEmail}>
-                <label htmlFor="from_name">Name: <input required id="from_name" name="from_name" type="text"></input></label>
-                <label htmlFor="from_email">email: <input required id="from_email" name="from_email" type="email"></input></label>
-                <label htmlFor="title">Title: <input required id="title" name="title" type="text"></input></label>
+        <div className="hidden" >
+            <h2>Contact</h2>
+            <div style={{margin: "2rem 0 9"}}>
+                <p>If you'd like to get in touch with me, you can find me over on <a target="_blank" href="https://www.linkedin.com/in/val%C3%A9rie-payeur-0050baa7/"><LinkedInIcon />LinkedIn</a></p>
+                <p>or fill out this form!</p>
+            </div>
+            <form ref={form} onSubmit={handleSubmitEmail} style={{margin: "1rem auto", position: "relative"}}>
+                <div className="formElements">
+                    <label htmlFor="from_name">Name: </label>
+                    <input required id="from_name" name="from_name" type="text"></input>
+                </div>
+                <div className="formElements">
+                    <label htmlFor="from_email">email: </label>
+                    <input required id="from_email" name="from_email" type="email"></input>
+                </div>
+                <div className="formElements">
+                    <label htmlFor="title">Title: </label>
+                    <input required id="title" name="title" type="text"></input>
+                </div>
                 <textarea required name="message" id="message" placeholder="Type your message here!" style={{margin: "2rem auto 1rem", width: "100%", maxWidth: "500px", height: "100px", fontFamily: "Grandstander"}}></textarea>
                 <StyledSubmitButton type="submit">Submit</StyledSubmitButton>
             </form>
@@ -48,7 +59,7 @@ const StyledContactDiv = styled.div`
 `
 
 const StyledSubmitButton = styled.button`
-    margin: auto;
+    margin: 1rem auto;
     background-color: var(--color-text-light);
     border: none;
     border-radius: 15px;

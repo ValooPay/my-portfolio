@@ -130,6 +130,7 @@ table {
 
 body {
     display: flex;
+    /* min-height: 100dvh; */
     max-width: 100dvw;
     font-size: 1.75rem;
     font-family: "Grandstander";
@@ -258,7 +259,7 @@ button:disabled{
 
 .paperPlaneImage{
     position: absolute;
-    bottom: -55px;
+    bottom: -15%;
     right: 3%;
     max-width: 30vw;
     z-index: -1;
@@ -270,21 +271,9 @@ button:disabled{
     right: 0;
 }
 
-form {
-    display: flex;
-    justify-content: space-between;
+label {
+    margin: auto;
     width: fit-content;
-    margin: 0 auto;
-}
-
-.formElements {
-    display: flex;
-    justify-content: space-between;
-    margin: 0.5rem 0;
-}
-
-.formElements label {
-    margin-right: 1rem;
 }
 
 .modeButton {
