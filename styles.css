@@ -315,9 +315,6 @@ input{
     .columnOnMobile{
         flex-direction: column-reverse;
     }
-    .paperPlaneImage{
-        max-width: 75dvw;
-    }
     .modeButtonText{
         font-size: 5rem;
     }
