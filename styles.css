@@ -305,14 +305,6 @@ input{
     font-family: "Grandstander";
 }
 
-.valAnimation{
-    position: absolute;
-    width: 250px;
-    height: auto;
-    left: 15dvw;
-    bottom: 0;
-}
-
 @media screen and (max-width: 480px) { 
     .columnOnMobile{
         flex-direction: column-reverse;
@@ -327,8 +319,5 @@ input{
         padding: 0 20px;
         bottom: 3rem;
         left: 3rem;
-    }
-    .valAnimation{
-        left: 10dvw;
     }
 }
