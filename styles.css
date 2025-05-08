@@ -160,6 +160,7 @@ a {
 a:hover {
     color: white;
     text-shadow: var(--color-text-dark) 1px 0 1px;
+    cursor: pointer;
 }
 
 a:active {

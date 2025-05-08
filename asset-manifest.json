@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/my-portfolio/static/js/main.00ed9d59.js",
+    "main.js": "/my-portfolio/static/js/main.44e29adb.js",
     "static/media/animationval.gif": "/my-portfolio/static/media/animationval.0620c5b87293f44edc23.gif",
     "static/media/valuigi.jpg": "/my-portfolio/static/media/valuigi.75eec30537de8763a5fc.jpg",
     "static/media/NyanCatZubatGame.png": "/my-portfolio/static/media/NyanCatZubatGame.22de18205f1fdab5f29f.png",
     "static/media/paperplane.png": "/my-portfolio/static/media/paperplane.457d0d3ad820354a361d.png",
     "static/media/tictactoe.PNG": "/my-portfolio/static/media/tictactoe.e2e7e10da5255a68b39c.PNG",
     "index.html": "/my-portfolio/index.html",
-    "main.00ed9d59.js.map": "/my-portfolio/static/js/main.00ed9d59.js.map"
+    "main.44e29adb.js.map": "/my-portfolio/static/js/main.44e29adb.js.map"
   },
   "entrypoints": [
-    "static/js/main.00ed9d59.js"
+    "static/js/main.44e29adb.js"
   ]
 }
