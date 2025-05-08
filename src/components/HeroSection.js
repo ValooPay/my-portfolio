@@ -1,15 +1,28 @@
 import styled from "styled-components"
 import AnimVal from "../assets/animationval.gif"
+import { useContext } from "react"
+import { LanguageContext } from "../context/LanguageContext"
 
 const HeroSection = () => {
+    const { lang } = useContext(LanguageContext)
+
     return (
         <>
         <StyledHeroSection id="Home">
+            {lang === "en" ? <>
             <h1>Welcome!</h1>
             <div>
                 <img className="valAnimation" src={AnimVal + "?a="+Math.random()+""} alt="Welcome!" />
                 <p>to my portfolio!</p>
             </div>
+            </> : <>
+            <h1>Bienvenue!</h1>
+            <div>
+                <img className="valAnimation" src={AnimVal + "?a="+Math.random()+""} alt="Welcome!" />
+                <p>à mon portfolio!</p>
+            </div>
+            </>
+            }
         </StyledHeroSection>
         </>
     )

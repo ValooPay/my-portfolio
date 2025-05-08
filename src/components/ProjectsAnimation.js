@@ -1,25 +1,29 @@
 import styled from "styled-components"
+import { useContext } from "react"
+import { LanguageContext } from "../context/LanguageContext"
 
 const ProjectsAnimation = () => {
+    const { lang } = useContext(LanguageContext)
+
     return <div id="Animation" className="paleSections scrollable" style={{position: "relative", padding: "0 0 5rem"}}>
         <div className="hidden">
-            <h2>Animation reels</h2>
+            {lang === "en" ? <h2>Animation reels</h2> : <h2>Démos d'animation</h2>}
             <StyledProjectsAnimationDiv>
                 <div>
-                    <p>2024 Demoreel</p>
+                {lang === "en" ? <p>2024 Demoreel</p> : <p>Démo 2024</p>}
                     <iframe className="projects" width="560" height="315" src="https://www.youtube.com/embed/m8mjNeu2-dM?si=TcGC0PzpyTYZPRdC"></iframe>
                 </div>
                 <div>
-                    <p>3D reel</p>
+                    {lang === "en" ? <p>3D reel</p> : <p>Démo 3D</p>}
                     <iframe className="projects" width="560" height="315" src="https://www.youtube.com/embed/mwWT-2knUag?si=kN4TM5bYMsOvwitE"></iframe>
                 </div>
             </StyledProjectsAnimationDiv>
             <div>
-                <p style={{marginBottom: "1rem"}}>3D Final project (2021) - Move</p>
+                {lang === "en" ? <p style={{marginBottom: "1rem"}}>3D Final project (2021) - Move</p> : <p style={{marginBottom: "1rem"}}>Projet final 3D - Move</p>}
                     <iframe className="projects" width="560" height="315" src="https://www.youtube.com/embed/rpri-I06o6o?si=NddfEDy2_EU1e1bP"></iframe>
                 </div>
             <div>
-                <p>...And more to come!</p>
+                {lang === "en" ? <p>...And more to come!</p> : <p>...et plus à venir!</p>}
             </div>
         </div>
         <div className="custom-shape-divider-bottom-1744991574-TEST">

@@ -1,7 +1,11 @@
 import styled from "styled-components"
 import Valuigi from "../assets/valuigi.jpg"
+import { useContext } from "react"
+import { LanguageContext } from "../context/LanguageContext"
 
 const AboutMe = () => {
+    const { lang } = useContext(LanguageContext)
+
     return <section id="About me" className="paleSections scrollable columnOnMobile" style={{position: "relative"}}>
     <div className="custom-shape-divider-top-1744989386">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -9,19 +13,36 @@ const AboutMe = () => {
         </svg>
     </div>
     <StyledAboutMe>
+        {lang === "en" ? <>
         <div className="hidden">
             <h2>About me</h2>
                 <p>
-                    Hello! I'm Valerie! <span className="smallText">(Nice to meet you!)</span>
+                    Hello! I'm Valérie! <span className="smallText">(Nice to meet you!)</span>
                 </p>
                 <p>
                     At my core, I am an artist with a passion for bringing ideas to life. I'm also a gamer who loves putting her brain to work solving puzzles. 
                 </p>
                 <p>
                     My near 10 years of experience in the animation industry has shaped me into the dedicated person I am today. I always strive to improve my skills, as well as learning new things. 
-                    Learning how to code in a short period of time has been a wonderful challenge and I look forward to learning more in future projects!
+                    Learning how to code in a short period of time has been a wonderful challenge and I look forward to putting my knowledge to the test!
                 </p>
         </div>
+        </> : <>
+        <div className="hidden">
+            <h2>À propos</h2>
+                <p>
+                    Coucou! Je m'appelle Valérie! <span className="smallText">(Enchantée!)</span>
+                </p>
+                <p>
+                    Je suis avant tout une artiste qui adore donner vie à différents projets. Je suis aussi une passionnée de jeux vidéos qui adore la résolution de problèmes. 
+                </p>
+                <p>
+                    Ma dizaine d'années d'expérience dans l'industrie de l'animation ont fait de moi la personne dévouée que je suis aujourd'hui. Je cherche toujours à améliorer mes compétences et à étendre mes connaissances.
+                    Apprendre à programmer dans un délai si court a été un défi formidable et j'ai hâte de mettre mes connaissances à exécution!
+                </p>
+        </div>
+        </>
+        }
     </StyledAboutMe>
     <img src={Valuigi} alt="A photo of me!" className="valPhoto hidden"/>
     </section>

@@ -3,12 +3,15 @@ import React, { useRef } from "react"
 import emailjs from '@emailjs/browser'
 import { LinkedInIcon } from "./Icons"
 import Paperplane from "../assets/paperplane.png"
+import { useContext } from "react"
+import { LanguageContext } from "../context/LanguageContext"
 
 const Contact = () => {
     const form = useRef()
     const SERVICE_ID = "valerie_contact_service"
     const TEMPLATE_ID = "template_32h3dxr"
     const PUBLIC_KEY = "B4kkWeoNj_QfPbxg6"
+    const { lang } = useContext(LanguageContext)
 
     const handleSubmitEmail = (ev) => {
         ev.preventDefault();
@@ -27,29 +30,40 @@ const Contact = () => {
     return <StyledContactDiv id="Contact" className="scrollable">
         <div className="hidden" >
             <h2>Contact</h2>
+            {lang === "en" ? 
             <div style={{margin: "2rem 0 9"}}>
                 <p>If you'd like to get in touch with me, you can find me over on <a target="_blank" href="https://www.linkedin.com/in/val%C3%A9rie-payeur-0050baa7/"><LinkedInIcon />LinkedIn</a></p>
                 <p>or fill out this form!</p>
+                
             </div>
+            : <div style={{margin: "2rem 0 9"}}>
+                <p>Si vous désirez me contacter, vous pouvez me joindre sur <a target="_blank" href="https://www.linkedin.com/in/val%C3%A9rie-payeur-0050baa7/"><LinkedInIcon />LinkedIn</a></p>
+                <p>ou remplir ce formulaire!</p>
+            </div>
+            }
             <form ref={form} onSubmit={handleSubmitEmail} style={{margin: "1rem auto", position: "relative"}}>
                 <div className="formDiv">
                     <div className="formElements">
-                        <label htmlFor="from_name">Name: </label>
+                        <label htmlFor="from_name">{lang === "en" ? "Name:" : "Nom:" } </label>
                         <input required id="from_name" name="from_name" type="text"></input>
                     </div>
                     <div className="formElements">
                         <label htmlFor="from_email">email: </label>
-                        <input required id="from_email" name="from_email" type="email"></input>
+                        <input required id="from_email" name="from_email" type="email" ></input>
                     </div>
                     <div className="formElements">
-                        <label htmlFor="title">Title: </label>
+                        <label htmlFor="title">{lang === "en" ? "Title: " : "Sujet: "}</label>
                         <input required id="title" name="title" type="text"></input>
                     </div>
                 </div>
-                <textarea required name="message" id="message" placeholder="Type your message here!" style={{margin: "2rem auto 1rem", width: "100%", maxWidth: "500px", height: "100px", fontFamily: "Grandstander"}}></textarea>
-                <StyledSubmitButton type="submit">Submit</StyledSubmitButton>
+                <textarea required name="message" id="message" placeholder={lang === "en" ? "Type your message here!" : "Écrivez votre message ici!"} style={{margin: "2rem auto 1rem", width: "100%", maxWidth: "500px", height: "100px", fontFamily: "Grandstander"}}></textarea>
+                <StyledSubmitButton type="submit">{lang === "en" ? "Submit" : "Envoyer"}</StyledSubmitButton>
             </form>
+            {lang === "en" ?
             <p>Thank you for visiting!</p>
+            :
+            <p>Merci de votre visite!</p>
+            }
             <img className="paperPlaneImage" src={Paperplane} alt="Send me a message, let's get in touch!" />
         </div>
     </StyledContactDiv>

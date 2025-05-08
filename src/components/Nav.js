@@ -1,10 +1,16 @@
 import styled from "styled-components"
 import React from "react"
+import LangSwitch from "./LangSwitch"
+import { useContext } from "react"
+import { LanguageContext } from "../context/LanguageContext"
 
-const navBarDirectories = ["Home", "About me", "Projects", "Contact"]
-const navBarHrefLink = ["/", "/#aboutMe", "/#projects", "/#contact"]
 
 const Nav = () => {
+    const { lang } = useContext(LanguageContext)
+    const navBarDirectories = ["Home", "About me", "Projects", "Contact"]
+    const navBarDirectoriesFr = ["Accueil", "À propos", "Projets", "Contact"]
+    const navBarHrefLink = ["/", "/#aboutMe", "/#projects", "/#contact"]
+
     return <StyledNavigationBar>
         {navBarDirectories.map((directory, index) => {
             return <a href={navBarHrefLink[index]} key={directory} onClick={(ev) => {ev.preventDefault()
@@ -16,8 +22,9 @@ const Nav = () => {
                         behavior: "smooth"
                     });
                 }
-            }} >{directory}</a>
+            }} >{lang === "en" ? directory : navBarDirectoriesFr[index]}</a>
         })}
+        <LangSwitch />
     </StyledNavigationBar>
 }
 
