@@ -52,7 +52,7 @@ const Contact = () => {
                         <input required id="from_email" name="from_email" type="email" ></input>
                     </div>
                     <div className="formElements">
-                        <label htmlFor="title">{lang === "en" ? "Title: " : "Sujet: "}</label>
+                        <label htmlFor="title">{lang === "en" ? "Subject: " : "Sujet: "}</label>
                         <input required id="title" name="title" type="text"></input>
                     </div>
                 </div>

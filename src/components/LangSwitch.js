@@ -5,7 +5,7 @@ const LangSwitch = () => {
     const { lang, langHandleClick } = useContext(LanguageContext)
 
     return <>
-    {lang === "en" ? <a onClick={langHandleClick}>{lang}</a> : <a onClick={langHandleClick}>{lang}</a>}
+    {lang === "en" ? <a onClick={langHandleClick}>fr</a> : <a onClick={langHandleClick}>en</a>}
     </>
 }
 
