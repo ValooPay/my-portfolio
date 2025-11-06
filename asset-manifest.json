@@ -1,15 +1,21 @@
 {
   "files": {
-    "main.js": "/my-portfolio/static/js/main.0f6708dd.js",
+    "main.js": "/my-portfolio/static/js/main.bfcad041.js",
+    "static/media/DoodleBoard.mov": "/my-portfolio/static/media/DoodleBoard.7236cc3ff9c5d2914351.mov",
+    "static/media/GroupProjectECommerce.mov": "/my-portfolio/static/media/GroupProjectECommerce.6dfbe7b40e4b0539192a.mov",
     "static/media/animationval.gif": "/my-portfolio/static/media/animationval.0620c5b87293f44edc23.gif",
+    "static/media/Adobe_Creative_Cloud_rainbow_icon.svg.png": "/my-portfolio/static/media/Adobe_Creative_Cloud_rainbow_icon.svg.6f3072f7a1422b8106e9.png",
     "static/media/valuigi.jpg": "/my-portfolio/static/media/valuigi.75eec30537de8763a5fc.jpg",
     "static/media/NyanCatZubatGame.png": "/my-portfolio/static/media/NyanCatZubatGame.22de18205f1fdab5f29f.png",
     "static/media/paperplane.png": "/my-portfolio/static/media/paperplane.457d0d3ad820354a361d.png",
     "static/media/tictactoe.PNG": "/my-portfolio/static/media/tictactoe.e2e7e10da5255a68b39c.PNG",
+    "static/media/Clip_Studio_Paint_app_logo.png": "/my-portfolio/static/media/Clip_Studio_Paint_app_logo.b2d2ee4117e814aea6a5.png",
+    "static/media/Moho.png": "/my-portfolio/static/media/Moho.8a431162b23d4cdb3b7d.png",
+    "static/media/3-premium.png": "/my-portfolio/static/media/3-premium.af4fbc5ad46c16759e78.png",
     "index.html": "/my-portfolio/index.html",
-    "main.0f6708dd.js.map": "/my-portfolio/static/js/main.0f6708dd.js.map"
+    "main.bfcad041.js.map": "/my-portfolio/static/js/main.bfcad041.js.map"
   },
   "entrypoints": [
-    "static/js/main.0f6708dd.js"
+    "static/js/main.bfcad041.js"
   ]
 }

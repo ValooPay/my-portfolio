@@ -208,6 +208,18 @@ a:active {
 .iconAnimation:nth-child(6){
     transition-delay: 600ms;
 }
+.iconAnimation:nth-child(7){
+    transition-delay: 700ms;
+}
+.iconAnimation:nth-child(8){
+    transition-delay: 800ms;
+}
+.iconAnimation:nth-child(9){
+    transition-delay: 900ms;
+}
+.iconAnimation:nth-child(10){
+    transition-delay: 1000ms;
+}
 
 .allIcons{
     transform: scale(225%);
@@ -218,6 +230,7 @@ a:active {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 form {
@@ -328,4 +341,8 @@ input{
     .paperPlaneImage{
         max-width: 45dvw;
     }
+}
+
+iframe{
+    padding: 2rem;
 }
